@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'> <!--FATICON CDN-->
+    <link rel="stylesheet" href="./css/style.css">
     <title>Novalia, Simplify your life with minimalist design.</title>
 </head>
 <body>
@@ -11,15 +13,25 @@
         <div class="topHeader">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
         </div>
-        <div class="mainHeader">
-            <a href=""><img src="https://dummyimage.com/100x100/030173/ffffff&text=logo" alt=""></a>
-            <ul>
-                <li>Products</li>
-                <li>Rooms</li>
-                <li>Offers</li>
-            </ul>
-            <!--BARRA DE BUSCADOR-->
-        </div>
+        <nav>
+            <div class="mainHeader">
+                <input type="checkbox" id="check">  
+                <a href="" class="mainLogo"><img src="https://dummyimage.com/100x100/030173/ffffff&text=logo" alt=""></a>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Rooms</a></li>
+                    <li><a href="#">Offers</a></li>
+                </ul>
+                <div class="search_box">
+                    <input type="search" placeholder="What are you looking for?">
+                    <span class= "fi fi-br-search"></span>
+                </div>
+                <label for="check" class="bar">
+                    <span class="fi fi-br-menu-burger" id="burguerBar"></span>
+                    <span class="fi fi-br-cross-small" id="xClose"></span>
+                </label>
+            </div>
+        </nav>
     </header>
     <main>
         <section class="hero">

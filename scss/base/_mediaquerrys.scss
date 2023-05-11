@@ -1,0 +1,74 @@
+@media screen and (max-width:1250px) {
+
+        .mainHeader{
+            display: block;
+            padding: 0;
+            .mainLogo{
+                display: inline-block;
+                padding: 15px 30px;
+            }
+            .search_box{
+                width: 95%;
+                margin: 20px 10px;
+                display: inline-flex;
+                justify-content: center;
+            }
+            ul{
+                order:2;
+                //!ELIMINAR LUEGO CON JS, MENU HAMBURGUESA, HACER UN MODAL LUEGO
+                flex-direction: column;
+                background-color: $light;
+                height: 0;
+                visibility: hidden;
+                transition: 0.4s;
+                li{
+                    text-align: center;
+                    transition: 0.5s 0.2s all;
+                    opacity: 0;
+                    &:nth-child(1){
+                        transform: translateX(-150px);
+                    }
+                    &:nth-child(2){
+                        transform: translateX(-200px);
+                    }
+                    &:nth-child(3){
+                        transform: translateX(-250px);
+                    }
+                    a {
+                        font-size: 28px;
+                        padding: 25px;
+                        display: block;
+                        &:hover{
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+            .bar{
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 80px;
+                #xClose{
+                    display: none;
+                }
+            }
+            #check:checked ~ .bar #xClose{
+                display: block;
+            }
+            #check:checked ~ .bar #burguerBar{
+                display: none;
+            }
+            #check:checked ~ ul{
+                visibility: visible;
+                height: 246px;
+            }
+            #check:checked ~ ul li:nth-child(1),
+            #check:checked ~ ul li:nth-child(2),
+            #check:checked ~ ul li:nth-child(3){
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }  
+    
+}

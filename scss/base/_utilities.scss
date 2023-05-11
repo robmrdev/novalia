@@ -1,0 +1,17 @@
+/*--------------VARIABLES---------------*/
+
+$light:aliceblue;
+$dark: rgb(26, 24, 20);
+
+
+
+/*--------------EXTENDS---------------*/
+
+%flexcenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--------------MIXINS---------------*/
+

@@ -1,6 +1,7 @@
-@import "./base/variables";
+@import "./base/utilities";
 @import "./base/commons";
 @import "./components/header";
 @import "./components/footer";
-@import "./components/pages/index";
+@import "./pages/index";
+@import "./components/components";
 @import "./base/mediaquerrys";

@@ -1,1 +1,132 @@
-/*# sourceMappingURL=style.css.map */
+/*--------------VARIABLES---------------*/
+/*--------------EXTENDS---------------*/
+.mainHeader, .mainHeader .search_box, .mainHeader ul {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/*--------------MIXINS---------------*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+main {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: aliceblue; }
+
+.topHeader {
+  background-color: black;
+  color: white; }
+
+.mainHeader {
+  width: 100%;
+  justify-content: space-between;
+  text-align: center; }
+  .mainHeader .search_box {
+    height: 60px;
+    margin: auto 0;
+    border-radius: 50em;
+    background-color: #e7edf4;
+    width: 480px; }
+    .mainHeader .search_box:hover {
+      background-color: #cdd5dd; }
+    .mainHeader .search_box input {
+      border: none;
+      height: 25px;
+      width: 100%;
+      padding-left: 20px;
+      font-size: 20px;
+      background: transparent;
+      outline: none; }
+    .mainHeader .search_box span {
+      padding: 20px 25px 15px 10px;
+      font-size: 20px;
+      border-top-right-radius: 50em;
+      border-bottom-right-radius: 50em;
+      background-color: transparent;
+      background-image: linear-gradient(to right, rgba(190, 197, 205, 0) 50%, #bec5cd 50%);
+      background-size: 200% 100%;
+      background-position: left bottom;
+      transition: background-position 0.3s ease-in-out; }
+      .mainHeader .search_box span:hover {
+        background-position: right bottom; }
+  .mainHeader ul {
+    list-style: none;
+    order: 2; }
+    .mainHeader ul li a {
+      color: #1a1814;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      padding: 10px 20px; }
+      .mainHeader ul li a:hover {
+        background-color: darkgrey;
+        color: aliceblue;
+        border-radius: 50em; }
+  .mainHeader .bar {
+    position: relative;
+    margin: auto;
+    display: none; }
+    .mainHeader .bar span {
+      position: absolute;
+      color: #1a1814;
+      font-size: 60px; }
+  .mainHeader input[type="checkbox"] {
+    display: none; }
+
+@media screen and (max-width: 1250px) {
+  .mainHeader {
+    display: block;
+    padding: 0; }
+    .mainHeader .mainLogo {
+      display: inline-block;
+      padding: 15px 30px; }
+    .mainHeader .search_box {
+      width: 95%;
+      margin: 20px 10px;
+      display: inline-flex;
+      justify-content: center; }
+    .mainHeader ul {
+      order: 2;
+      flex-direction: column;
+      background-color: aliceblue;
+      height: 0;
+      visibility: hidden;
+      transition: 0.4s; }
+      .mainHeader ul li {
+        text-align: center;
+        transition: 0.5s 0.2s all;
+        opacity: 0; }
+        .mainHeader ul li:nth-child(1) {
+          transform: translateX(-150px); }
+        .mainHeader ul li:nth-child(2) {
+          transform: translateX(-200px); }
+        .mainHeader ul li:nth-child(3) {
+          transform: translateX(-250px); }
+        .mainHeader ul li a {
+          font-size: 28px;
+          padding: 25px;
+          display: block; }
+          .mainHeader ul li a:hover {
+            border-radius: 0; }
+    .mainHeader .bar {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 80px; }
+      .mainHeader .bar #xClose {
+        display: none; }
+    .mainHeader #check:checked ~ .bar #xClose {
+      display: block; }
+    .mainHeader #check:checked ~ .bar #burguerBar {
+      display: none; }
+    .mainHeader #check:checked ~ ul {
+      visibility: visible;
+      height: 246px; }
+    .mainHeader #check:checked ~ ul li:nth-child(1),
+    .mainHeader #check:checked ~ ul li:nth-child(2),
+    .mainHeader #check:checked ~ ul li:nth-child(3) {
+      transform: translateX(0);
+      opacity: 1; } }
