@@ -3,15 +3,36 @@
 $light:aliceblue;
 $dark: rgb(26, 24, 20);
 
-
+$color1:rgb(66, 66, 255);
+$color2: rgb(247, 139, 62);
+$color3: rgb(38, 130, 15);
 
 /*--------------EXTENDS---------------*/
 
-%flexcenter{
+%flexCenter{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+%flexCenterColumn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+%cardProduct1{
+    background-color: $color1;
+    color:$light;
+}
+%cardProduct2{
+    background-color: $color2;
+    color:$dark;
+}
+%cardAdvice1{
+    background-color: $color3;
+    color:$light;
+}
 /*--------------MIXINS---------------*/
 

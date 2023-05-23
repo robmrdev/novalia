@@ -1,30 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
 /*--------------VARIABLES---------------*/
 /*--------------EXTENDS---------------*/
-.mainHeader, .mainHeader .search_box, .mainHeader ul {
+.mainHeader, .mainHeader .search_box, .mainHeader ul, .newOnIndex div, .shipInfo {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.indexRooms div .roomsSelector, .shipInfo div, .card div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.newOnIndex div .card1 {
+  background-color: #4242ff;
+  color: aliceblue; }
+
+.newOnIndex div .card2 {
+  background-color: #f78b3e;
+  color: #1a1814; }
+
+.newOnIndex div .card3 {
+  background-color: #26820f;
+  color: aliceblue; }
 
 /*--------------MIXINS---------------*/
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: 'Signika Negative', sans-serif; }
 
 main {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 88%;
+  margin-left: 6%;
+  margin-right: 6%;
   background-color: aliceblue; }
 
 .topHeader {
   background-color: black;
-  color: white; }
+  color: white;
+  height: 3.5vh; }
 
 .mainHeader {
   width: 100%;
   justify-content: space-between;
-  text-align: center; }
+  text-align: center;
+  height: 12vh; }
   .mainHeader .search_box {
     height: 60px;
     margin: auto 0;
@@ -75,6 +97,101 @@ main {
       font-size: 60px; }
   .mainHeader input[type="checkbox"] {
     display: none; }
+
+.hero {
+  display: flex; }
+  .hero img {
+    width: 75%; }
+  .hero div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: #4242ff;
+    color: aliceblue;
+    padding: 3rem; }
+    .hero div div {
+      width: 100%;
+      height: 70%;
+      padding: 0; }
+      .hero div div h3 {
+        font-size: 1.8rem; }
+      .hero div div p {
+        font-size: 1rem; }
+    .hero div a {
+      text-align: center;
+      width: fit-content; }
+
+.newOnIndex h3 {
+  margin: 7vh 0 7vh 2vh;
+  font-weight: 600;
+  font-size: 2.2em; }
+
+.newOnIndex div {
+  justify-content: flex-start; }
+
+.indexRooms h3 {
+  margin: 7vh 0 7vh 2vh;
+  font-weight: 600;
+  font-size: 2.2em; }
+
+.indexRooms div {
+  display: flex;
+  margin: 1vh; }
+  .indexRooms div .roomsSelector img {
+    width: 100%; }
+
+.shipInfo div {
+  flex-basis: 22%;
+  justify-content: space-around;
+  background-color: #dfe8f0;
+  min-height: 200px;
+  margin: 2px;
+  padding: 1rem;
+  text-align: center; }
+  .shipInfo div i {
+    font-size: 30px; }
+
+.ideasIndex .mainGrid {
+  padding: 10px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1.25rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row dense; }
+  .ideasIndex .mainGrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .ideasIndex .mainGrid .vGrid {
+    grid-row: span 3;
+    grid-column: span 2; }
+  .ideasIndex .mainGrid .sd {
+    grid-row: span 4;
+    grid-column: span 2; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0.5rem; }
+  .card img {
+    width: 100%; }
+  .card div {
+    align-items: flex-start; }
+    .card div div {
+      align-items: flex-start;
+      padding: 32px;
+      height: 250px; }
+    .card div a {
+      margin: 32px; }
+
+.button {
+  color: #1a1814;
+  background-color: aliceblue;
+  border-radius: 2em;
+  padding: 1rem 1.5rem;
+  text-align: center; }
 
 @media screen and (max-width: 1250px) {
   .mainHeader {
@@ -130,3 +247,19 @@ main {
     .mainHeader #check:checked ~ ul li:nth-child(3) {
       transform: translateX(0);
       opacity: 1; } }
+
+@media screen and (max-width: 900px) {
+  .shipInfo {
+    flex-wrap: wrap; }
+    .shipInfo div {
+      flex-basis: 42%; } }
+
+@media screen and (max-width: 560px) {
+  .ideasIndex .mainGrid .vGrid {
+    grid-row: span 1; }
+  .ideasIndex .mainGrid .hGrid {
+    grid-column: span 1; }
+  .shipInfo {
+    flex-wrap: wrap; }
+    .shipInfo div {
+      flex-basis: 90%; } }

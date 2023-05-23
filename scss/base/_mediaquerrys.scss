@@ -72,3 +72,32 @@
         }  
     
 }
+
+@media screen and (max-width:900px) {
+    .shipInfo{
+        flex-wrap: wrap;
+        div{
+            flex-basis: 42%;
+        }
+    }
+}
+
+@media screen and (max-width:560px) {
+    .ideasIndex{
+        .mainGrid{
+                .vGrid{
+                    grid-row: span 1;
+                }
+                .hGrid{
+                    grid-column: span 1;
+                }
+        }
+    }    
+    .shipInfo{
+        flex-wrap: wrap;
+        div{
+            flex-basis: 90%;
+        }
+    }
+
+}

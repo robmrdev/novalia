@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'> <!--FATICON CDN-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'> <!--FATICON CDN-->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel="stylesheet" href="./css/style.css">
     <title>Novalia, Simplify your life with minimalist design.</title>
 </head>
@@ -16,7 +18,7 @@
         <nav>
             <div class="mainHeader">
                 <input type="checkbox" id="check">  
-                <a href="" class="mainLogo"><img src="https://dummyimage.com/100x100/030173/ffffff&text=logo" alt=""></a>
+                <a href="" class="mainLogo"><img src="./img/logo.svg" alt=""></a>
                 <ul>
                     <li><a href="#">Products</a></li>
                     <li><a href="#">Rooms</a></li>
@@ -35,11 +37,13 @@
     </header>
     <main>
         <section class="hero">
-            <img src="https://dummyimage.com/600x600/8685f5/ffffff&text=hero" alt="">
+            <img src="./img/a-white-ikea-kitchen-in-a-light-house.webp" alt="">
             <div>
-                <h4>Last Offert</h4>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <a href="">boton</a> <!-- Boton -->
+                <div>
+                    <h3>Last Offert</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <a href="" class="button">Check the Offer</a> <!-- Boton -->
             </div>
         </section>
 
@@ -47,19 +51,36 @@
             <!-- CARRUSEL TARJETAS 2 ITEM 1 CONSEJO -->
             <h3>New On Novalia</h3>
             <div>
-                <img src="https://dummyimage.com/300x300/000000/fff&text=product" alt="">
-                <p>Producto 1</p>
-                <a href="">boton</a>
-            </div>
-            <div>
-                <img src="https://dummyimage.com/300x300/000000/fff&text=product" alt="">
-                <p>producto 2</p>
-                <a href="">boton</a>
-            </div>
-            <div>
-                <img src="https://dummyimage.com/300x300/000000/fff&text=advice" alt="">
-                <p>consejo 1</p>
-                <a href="">boton</a>
+                <div class="card card1">
+                    <img src="https://dummyimage.com/300x300/000000/fff&text=product" alt="">
+                    <div>
+                        <div>
+                            <h4>Producto 1</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quod veritatis earum asperiores, quas eligendi?</p>    
+                        </div>
+                        <a href="" class="button">boton</a>
+                    </div>
+                </div>
+                <div class="card card2">
+                    <img src="https://dummyimage.com/300x300/000000/fff&text=product" alt="">
+                    <div>
+                        <div>
+                            <h4>producto 2</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quod veritatis earum asperiores, quas eligendi?</p>    
+                        </div>
+                        <a href="" class="button">boton</a>
+                    </div>
+                </div>
+                <div class="card card3">
+                    <img src="https://dummyimage.com/300x300/000000/fff&text=advice" alt="">
+                    <div>
+                        <div>
+                            <h4>consejo 1</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quod veritatis earum asperiores, quas eligendi?</p>    
+                        </div>
+                        <a href="" class="button">boton</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -67,19 +88,26 @@
             <!-- CARRUSEL CON HABITACION E IMAGENES -->
             <h3>Rooms</h3>
             <div>
-                <a href="">Kitchen</a>
-            </div>
-            <div>
-                <a href="">Living room</a>
-            </div>
-            <div>
-                <a href="">Bedroom</a>
-            </div>
-            <div>
-                <a href="">Dining room</a>
-            </div>
-            <div>
-                <a href="">Bathroom</a>
+                <div class="roomsSelector">
+                    <img src="./img/kitchenSelector.webp" alt="">
+                    <a href="" class="button">Kitchen</a>
+                </div>
+                <div class="roomsSelector">
+                    <img src="./img/livingSelector.webp" alt="">
+                    <a href="" class="button">Living room</a>
+                </div>
+                <div class="roomsSelector">
+                    <img src="./img/bedroomSelector.webp" alt="">
+                    <a href="" class="button">Bedroom</a>
+                </div>
+                <div class="roomsSelector">
+                    <img src="./img/diningRoomSelector.webp" alt="">
+                    <a href="" class="button">Dining room</a>
+                </div>
+                <div class="roomsSelector">
+                    <img src="./img/bathroomSelector.webp" alt="">
+                    <a href="" class="button">Bathroom</a>
+                </div>
             </div>
         </section>
 
@@ -116,23 +144,20 @@
         </section>
         <section class="shipInfo">
             <div>
-                <img src="https://dummyimage.com/50x50/000000/ffffff&text=icon" alt=""><!-- flaticon -->
+                <i class="fi fi-rr-warehouse-alt"></i><!-- flaticon -->
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, quod.</p>
                 <a href="">boton</a> <!-- Boton -->
             </div>
             <div>
-                <img src="https://dummyimage.com/50x50/000000/ffffff&text=icon" alt=""><!-- flaticon -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, saepe.</p>
+                <i class="fi fi-rs-truck-side"></i>                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, saepe.</p>
                 <a href="">boton</a> <!-- Boton -->
             </div>
             <div>
-                <img src="https://dummyimage.com/50x50/000000/ffffff&text=icon" alt=""><!-- flaticon -->
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, nesciunt!</p>
+                <i class="fi fi-br-messages"></i>                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, nesciunt!</p>
                 <a href="">boton</a> <!-- Boton -->
             </div>
             <div>
-                <img src="https://dummyimage.com/50x50/000000/ffffff&text=icon" alt=""> <!-- flaticon -->
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, architecto?</p>
+                <i class="fi fi-rs-paint-brush"></i>                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, architecto?</p>
                 <a href="">boton</a> <!-- Boton -->
             </div>
         </section>
@@ -140,14 +165,22 @@
         <section class="ideasIndex">
             <h2>Best ideas and inspiration</h2>
             <div> <!--botones de habitacion-->
-                <a href="">Kitchen</a>
+                <a href="">Kitchen</a>  
                 <a href="">Living room</a>
                 <a href="">Bedroom</a>
                 <a href="">Dinning room</a>
                 <a href="">Bathroom</a>
             </div>
-            <div>
-                <!--GRID CON IMAGENES DINAMICAS-->
+            <div class="mainGrid">
+                <img src="https://dummyimage.com/400x400/92de94/fff&text=Item" alt="" class="sd">
+                <img src="https://dummyimage.com/400x400/92de94/fff&text=Item" alt="" class="vGrid">
+                <img src="https://dummyimage.com/400x400/92de94/fff&text=Item" alt="" class="sd">
+                <img src="https://dummyimage.com/400x800/92de94/fff&text=Item" alt="" class="sd">
+                <img src="https://dummyimage.com/400x400/92de94/fff&text=Item" alt="" class="sd">
+                <img src="https://dummyimage.com/400x400/92de94/fff&text=Item" alt="" class="sd">
+                <img src="https://dummyimage.com/400x400/92de94/fff&text=Item" alt="" class="sd">
+                <img src="https://dummyimage.com/400x400/92de94/fff&text=Item" alt="" class="sd">
+                <img src="https://dummyimage.com/800x400/92de94/fff&text=Item" alt="" class="sd">
             </div>
         </section>
     </main>

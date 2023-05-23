@@ -1,15 +1,16 @@
 .topHeader {
     background-color: black;
     color: white;
+    height: 3.5vh;
 }
 .mainHeader{
     width: 100%;
-    @extend %flexcenter;
+    @extend %flexCenter;
     justify-content: space-between;
     text-align: center;
-
+    height: 12vh;
     .search_box{
-        @extend %flexcenter;
+        @extend %flexCenter;
         height: 60px;
         margin: auto 0;
         border-radius: 50em;
@@ -44,7 +45,7 @@
     }
 
     ul{
-        @extend %flexcenter;
+        @extend %flexCenter;
         list-style: none;
         order: 2;  
         li{
