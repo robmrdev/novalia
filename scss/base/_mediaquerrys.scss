@@ -3,9 +3,15 @@
         .mainHeader{
             display: block;
             padding: 0;
+            height: 24vh;
             .mainLogo{
-                display: inline-block;
+                display: flex;
                 padding: 15px 30px;
+            }
+            label{
+                span{
+                    margin-top: 15px;
+                }
             }
             .search_box{
                 width: 95%;
@@ -80,16 +86,27 @@
             flex-basis: 42%;
         }
     }
+
+    .ideasIndex{
+        .mainGrid{
+            .vGrid{
+                grid-column: span 3;
+            }
+            .sd{
+                grid-column: span 3;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:560px) {
     .ideasIndex{
         .mainGrid{
                 .vGrid{
-                    grid-row: span 1;
+                    grid-column: span 6;
                 }
-                .hGrid{
-                    grid-column: span 1;
+                .sd{
+                    grid-column: span 6;
                 }
         }
     }    

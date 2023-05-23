@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
 /*--------------VARIABLES---------------*/
 /*--------------EXTENDS---------------*/
-.mainHeader, .mainHeader .search_box, .mainHeader ul, .newOnIndex div, .shipInfo {
+.mainHeader, .mainHeader .search_box, .mainHeader ul, .newOnIndex div, .looksByYou span, .shipInfo {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -13,15 +13,15 @@
   flex-direction: column; }
 
 .newOnIndex div .card1 {
-  background-color: #4242ff;
+  background-color: #0071cc;
   color: aliceblue; }
 
 .newOnIndex div .card2 {
-  background-color: #f78b3e;
+  background-color: #f5e2db;
   color: #1a1814; }
 
 .newOnIndex div .card3 {
-  background-color: #26820f;
+  background-color: #5d7055;
   color: aliceblue; }
 
 /*--------------MIXINS---------------*/
@@ -136,39 +136,93 @@ main {
 
 .indexRooms div {
   display: flex;
-  margin: 1vh; }
+  margin: 1.5vh; }
   .indexRooms div .roomsSelector img {
     width: 100%; }
 
-.shipInfo div {
-  flex-basis: 22%;
-  justify-content: space-around;
-  background-color: #dfe8f0;
-  min-height: 200px;
-  margin: 2px;
-  padding: 1rem;
-  text-align: center; }
-  .shipInfo div i {
-    font-size: 30px; }
+.looksByYou h3 {
+  margin: 7vh 0 7vh 2vh;
+  font-weight: 600;
+  font-size: 2.2em; }
 
-.ideasIndex .mainGrid {
-  padding: 10px;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 1.25rem;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  grid-auto-rows: 1fr;
-  grid-auto-flow: row dense; }
-  .ideasIndex .mainGrid img {
-    width: 100%;
+.looksByYou span {
+  height: 300px; }
+  .looksByYou span div {
+    width: 300px;
     height: 100%;
-    object-fit: cover; }
-  .ideasIndex .mainGrid .vGrid {
-    grid-row: span 3;
-    grid-column: span 2; }
-  .ideasIndex .mainGrid .sd {
-    grid-row: span 4;
-    grid-column: span 2; }
+    margin: 10px; }
+    .looksByYou span div img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 1em; }
+
+.shipInfo {
+  margin: 8vh 0 8vh 0; }
+  .shipInfo div {
+    flex-basis: 22%;
+    justify-content: space-around;
+    background-color: #dfe8f0;
+    min-height: 150px;
+    margin: 2px;
+    padding: 1rem;
+    text-align: center; }
+    .shipInfo div i {
+      font-size: 30px; }
+
+.indexAdvice {
+  display: flex; }
+  .indexAdvice img {
+    width: 75%; }
+  .indexAdvice div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: #72594b;
+    color: #1a1814;
+    padding: 3rem; }
+    .indexAdvice div div {
+      width: 100%;
+      height: 70%;
+      padding: 0; }
+      .indexAdvice div div h4 {
+        font-size: 1.8rem; }
+      .indexAdvice div div p {
+        font-size: 1rem; }
+    .indexAdvice div a {
+      text-align: center;
+      width: fit-content; }
+
+.ideasIndex {
+  display: flex;
+  flex-direction: column; }
+  .ideasIndex h2 {
+    margin: 7vh 0 7vh 2vh;
+    font-weight: 700;
+    font-size: 2.5em; }
+  .ideasIndex .ideasButtons {
+    display: flex; }
+    .ideasIndex .ideasButtons a {
+      margin: 1em; }
+  .ideasIndex .mainGrid {
+    padding: 10px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1.25rem;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row dense; }
+    .ideasIndex .mainGrid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1em; }
+    .ideasIndex .mainGrid .vGrid {
+      grid-row: span 3;
+      grid-column: span 2; }
+    .ideasIndex .mainGrid .sd {
+      grid-row: span 4;
+      grid-column: span 2; }
 
 .card {
   display: flex;
@@ -186,20 +240,40 @@ main {
     .card div a {
       margin: 32px; }
 
-.button {
+.lightButton {
   color: #1a1814;
   background-color: aliceblue;
   border-radius: 2em;
   padding: 1rem 1.5rem;
-  text-align: center; }
+  text-align: center;
+  font-weight: bold; }
+
+.darkButton {
+  color: aliceblue;
+  background-color: #1a1814;
+  border-radius: 2em;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-weight: bold; }
+
+.mediumLightButton {
+  color: #1a1814;
+  background-color: #d2dae1;
+  border-radius: 2em;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-weight: bold; }
 
 @media screen and (max-width: 1250px) {
   .mainHeader {
     display: block;
-    padding: 0; }
+    padding: 0;
+    height: 24vh; }
     .mainHeader .mainLogo {
-      display: inline-block;
+      display: flex;
       padding: 15px 30px; }
+    .mainHeader label span {
+      margin-top: 15px; }
     .mainHeader .search_box {
       width: 95%;
       margin: 20px 10px;
@@ -252,13 +326,17 @@ main {
   .shipInfo {
     flex-wrap: wrap; }
     .shipInfo div {
-      flex-basis: 42%; } }
+      flex-basis: 42%; }
+  .ideasIndex .mainGrid .vGrid {
+    grid-column: span 3; }
+  .ideasIndex .mainGrid .sd {
+    grid-column: span 3; } }
 
 @media screen and (max-width: 560px) {
   .ideasIndex .mainGrid .vGrid {
-    grid-row: span 1; }
-  .ideasIndex .mainGrid .hGrid {
-    grid-column: span 1; }
+    grid-column: span 6; }
+  .ideasIndex .mainGrid .sd {
+    grid-column: span 6; }
   .shipInfo {
     flex-wrap: wrap; }
     .shipInfo div {

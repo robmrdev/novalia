@@ -24,10 +24,29 @@
 }
 
 
-.button {
+.lightButton {
     color: $dark;
     background-color: $light;
     border-radius: 2em;
     padding: 1rem 1.5rem;
     text-align: center;
+    font-weight: bold;
+}
+
+.darkButton {
+    color: $light;
+    background-color: $dark;
+    border-radius: 2em;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mediumLightButton {
+    color: $dark;
+    background-color: $mediumLight;
+    border-radius: 2em;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-weight: bold;
 }
