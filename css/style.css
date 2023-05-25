@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
 /*--------------VARIABLES---------------*/
 /*--------------EXTENDS---------------*/
-.mainHeader, .mainHeader .search_box, .mainHeader ul, .newOnIndex div, .looksByYou span, .shipInfo {
+.mainHeader, .mainHeader .search_box, .mainHeader ul, .newOnIndex div, .looksByYou span, .shipInfo, main .itemInterface .itemInfo .itemButtons .itemCounter {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.indexRooms div .roomsSelector, .shipInfo div, .card div {
+.indexRooms div .roomsSelector, .shipInfo div, main .itemInterface .itemImgsContainer, main .itemInterface .itemInfo .itemHowtoGetIt, main .itemInterface .itemInfo .itemHowtoGetIt div, .card div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,6 +36,11 @@ main {
   margin-left: 6%;
   margin-right: 6%;
   background-color: aliceblue; }
+
+.filters {
+  display: flex; }
+  .filters a {
+    margin: 1em; }
 
 .topHeader {
   background-color: black;
@@ -200,10 +205,6 @@ main {
     margin: 7vh 0 7vh 2vh;
     font-weight: 700;
     font-size: 2.5em; }
-  .ideasIndex .ideasButtons {
-    display: flex; }
-    .ideasIndex .ideasButtons a {
-      margin: 1em; }
   .ideasIndex .mainGrid {
     padding: 10px;
     margin: 0 auto;
@@ -224,6 +225,130 @@ main {
       grid-row: span 4;
       grid-column: span 2; }
 
+main .itemInterface {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-column-gap: 1.25rem; }
+  main .itemInterface .itemImgsContainer {
+    grid-column-start: 1;
+    grid-column-end: 9; }
+    main .itemInterface .itemImgsContainer .itemImgs {
+      display: flex;
+      flex-wrap: wrap; }
+      main .itemInterface .itemImgsContainer .itemImgs img {
+        width: 50%; }
+    main .itemInterface .itemImgsContainer div {
+      border-radius: 3em;
+      border: solid 1px #1a1814;
+      width: fit-content;
+      padding: 10px;
+      margin: 5vh; }
+      main .itemInterface .itemImgsContainer div:hover {
+        border: solid 2.2px #1a1814; }
+      main .itemInterface .itemImgsContainer div p {
+        padding: 0 20px; }
+  main .itemInterface .itemInfo {
+    grid-column-start: 9;
+    grid-column-end: 13; }
+    main .itemInterface .itemInfo h4 {
+      margin: 8vh 0 2vh 0;
+      font-size: 1.1em; }
+    main .itemInterface .itemInfo .itemHowtoGetIt {
+      margin-bottom: 8vh;
+      border-radius: 8px;
+      padding: 4px 16px;
+      border: solid 1px #d2dae1;
+      margin-right: 1.25rem; }
+      main .itemInterface .itemInfo .itemHowtoGetIt div {
+        width: 100%;
+        min-height: 150px;
+        margin: 1px;
+        padding: 1rem;
+        text-align: center; }
+        main .itemInterface .itemInfo .itemHowtoGetIt div i {
+          font-size: 30px; }
+      main .itemInterface .itemInfo .itemHowtoGetIt .itemTruck {
+        border-bottom: 1px solid #d2dae1; }
+    main .itemInterface .itemInfo .itemButtons {
+      display: flex;
+      margin: 30px 0; }
+      main .itemInterface .itemInfo .itemButtons .itemCounter {
+        border-radius: 3em;
+        border: solid 1px #1a1814;
+        width: fit-content;
+        margin-right: 15px;
+        padding: 0 5px; }
+        main .itemInterface .itemInfo .itemButtons .itemCounter div {
+          font-size: 1.5em;
+          text-align: center;
+          color: #1a1814;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px; }
+          main .itemInterface .itemInfo .itemButtons .itemCounter div:hover {
+            background-color: #d2dae1; }
+          main .itemInterface .itemInfo .itemButtons .itemCounter div .fi {
+            vertical-align: -0.35em; }
+        main .itemInterface .itemInfo .itemButtons .itemCounter p {
+          font-size: 1.5em;
+          padding: 0 10px; }
+      main .itemInterface .itemInfo .itemButtons .itemAdd {
+        width: fit-content;
+        font-size: 1.1em;
+        background-color: #0766b3;
+        color: aliceblue;
+        padding: 10px;
+        border-radius: 3em;
+        display: flex;
+        align-items: center; }
+        main .itemInterface .itemInfo .itemButtons .itemAdd:hover {
+          background-color: #095ca0; }
+        main .itemInterface .itemInfo .itemButtons .itemAdd p {
+          padding: 10px 30px; }
+  main .itemInterface .itemDescription {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    border-top: solid 1px #d2dae1;
+    display: block;
+    margin: 4vh 0; }
+    main .itemInterface .itemDescription span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid 1px #d2dae1;
+      padding: 4vh 0; }
+      main .itemInterface .itemDescription span p {
+        font-size: 2em;
+        margin-left: 2vh; }
+      main .itemInterface .itemDescription span i {
+        font-size: 3.5em;
+        margin-right: 2vh; }
+
+main .itemRelatedContainer h3 {
+  margin: 7vh 0 7vh 2vh;
+  font-weight: 600;
+  font-size: 2.2em; }
+
+main .itemRelatedContainer .itemRelated {
+  display: grid;
+  column-gap: 2.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch; }
+
+main h1 {
+  padding: 7vh 0 7vh 2vh;
+  font-weight: 600;
+  font-size: 2.2em; }
+
+main .filters {
+  padding: 2em; }
+
+main .productContainer {
+  display: grid;
+  column-gap: 2.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch; }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -240,6 +365,53 @@ main {
     .card div a {
       margin: 32px; }
 
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0.5rem; }
+  .productCard .productCardMain img {
+    width: 100%;
+    margin-bottom: 1.4em; }
+  .productCard .productCardMain .productCardInfo div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .productCard .productCardMain .productCardInfo div h5 {
+      font-size: 1.15em; }
+    .productCard .productCardMain .productCardInfo div .productCardPrice {
+      font-size: 1.4em;
+      font-weight: bold; }
+    .productCard .productCardMain .productCardInfo div div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 1.2em;
+      margin: 1.2em 0 1.2em 0; }
+      .productCard .productCardMain .productCardInfo div div .fi-br-shopping-basket {
+        text-align: center;
+        background-color: #0766b3;
+        color: aliceblue;
+        padding: 10px;
+        border-radius: 50%;
+        width: 1.2em;
+        height: 1.2em;
+        margin-right: 1.1em; }
+        .productCard .productCardMain .productCardInfo div div .fi-br-shopping-basket:hover {
+          background-color: #095ca0; }
+      .productCard .productCardMain .productCardInfo div div .fi-bs-heart {
+        text-align: center;
+        width: 1em;
+        height: 1em;
+        padding: 10px;
+        border-radius: 50%; }
+        .productCard .productCardMain .productCardInfo div div .fi-bs-heart:hover {
+          background-color: #d2dae1; }
+  .productCard .productCardOptions h6 {
+    margin: 1em 0 1em 0; }
+  .productCard .productCardOptions div {
+    display: flex; }
+
 .lightButton {
   color: #1a1814;
   background-color: aliceblue;
@@ -248,17 +420,19 @@ main {
   text-align: center;
   font-weight: bold; }
 
-.darkButton {
-  color: aliceblue;
-  background-color: #1a1814;
+.mediumLightButton {
+  color: #1a1814;
+  background-color: #d2dae1;
   border-radius: 2em;
   padding: 1rem 1.5rem;
   text-align: center;
   font-weight: bold; }
+  .mediumLightButton:hover {
+    background-color: #c2c9cf; }
 
-.mediumLightButton {
-  color: #1a1814;
-  background-color: #d2dae1;
+.darkButton {
+  color: aliceblue;
+  background-color: #1a1814;
   border-radius: 2em;
   padding: 1rem 1.5rem;
   text-align: center;

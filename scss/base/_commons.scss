@@ -10,3 +10,10 @@ main {
     margin-right: 6%;
     background-color: $light;
 }
+
+.filters{
+    display: flex;
+    a{
+        margin: 1em;
+    }    
+}
